@@ -1,0 +1,19 @@
+<h2 style="color:blue ">AJAX</h2>
+<h5 style="color:purple">														  
+<p>Ajax means asynchronous jacascript and xml.</p>
+<p>Ajax is not a prgramming language ,data transmission from bowser to server without reloading the entire page.</p>
+<p>Its asynchronous ,asynchronous menas get the response before we send a request to the server.</p>
+<p>First we create the xmlhttp request object for request to server.</p>
+<p>Then object.open(), open method have three parameters(method,url,asynchronous/synchronous)</p>
+<p>Then object.send()</p>
+<p>Method:get or post</p>
+<p>Url:destination of the page or file.</p>
+<p>True:means asynchronous</p>
+<p>Then xmlhttp request object recieve the response(text/xml).response from the server then xmlhttp object executes the onreadystatechange=function();
+if(a.readystate==4&&a.status==200){
+document.getelementbyid("ram").innner.html=a.responsetext.
+}</p>
+</h5>
+
+
+

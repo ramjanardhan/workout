@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ajax example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script  type="text/javascript">
+            function ram() {
+                var a
+                if (window.XMLHttpRequest)
+                {
+                    a = new XMLHttpRequest();
+                } else
+                {
+                    a = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+
+                a.onreadystatechange = function () {
+                    if (a.readyState == 4 && a.status == 200)
+                    {
+                        document.getElementById("jana").innerHTML = a.responseText;
+                    }
+                }
+                a.open("post", "new 3.txt", true);
+                a.send();
+            }
+        </script>
+         <div id="jana"></div>
+        <button type="submit" onclick="ram()">Change Content</button>
+
+    </body>
+</html>

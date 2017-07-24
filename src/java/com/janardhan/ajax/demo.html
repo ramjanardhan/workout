@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo On Ajax</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="1">
+            <button type="submit" onclick="getdata()">Get Data</button>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function getdata() {
+            var r = new XMLHttpRequest();
+            r.onreadystatechange = function () {
+                if (r.readyState == 4 && r.status == 200) {
+                    document.getElementById("1").innerHTML = r.responseText;
+                }
+            }
+            r.open("Get", "ajax.txt", true);
+            r.send();
+        }
+    </script>
+</html>
